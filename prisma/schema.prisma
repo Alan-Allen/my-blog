@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  title     String   // 文章標題
+  content   String?  // 文章內容
+  author    String   // 發布者
+  published Boolean  @default(false) // 發布狀態
+  createdAt DateTime @default(now()) // 建立時間
+}
