@@ -1,3 +1,14 @@
 @import "tailwindcss";
 
 @variant dark (&:where(.dark, .dark *));
+
+/* 隱藏滾動條，但保留滾動功能 */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
