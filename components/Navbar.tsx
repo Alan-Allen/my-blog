@@ -22,7 +22,13 @@ export default function Navbar() {
          </div>
          
          <div className="hidden md:flex items-center space-x-10">
-           <Link href="/" className="text-sm font-medium tracking-widest text-[#595959] dark:text-[#A0A0A0] hover:text-[#A33D32] dark:hover:text-[#A33D32] transition-colors duration-300">
+           <Link href="/" onClick={(e) => {
+            if (typeof window !== 'undefined' && window.location.pathname === "/") {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }}
+            className="text-sm font-medium tracking-widest text-[#595959] dark:text-[#A0A0A0] hover:text-[#A33D32] dark:hover:text-[#A33D32] transition-colors duration-300">
              卷首
            </Link>
            <Link href="/about" className="text-sm font-medium tracking-widest text-[#595959] dark:text-[#A0A0A0] hover:text-[#A33D32] dark:hover:text-[#A33D32] transition-colors duration-300">

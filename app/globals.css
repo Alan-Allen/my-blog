@@ -12,3 +12,25 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+/* 隱藏 Chrome, Safari 和 Opera 的滾動條 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 隱藏 IE, Edge 和 Firefox 的滾動條 */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* 如果您想讓「整個網頁」的預設滾動條都隱藏，可以直接套用到 html 或 body： */
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+

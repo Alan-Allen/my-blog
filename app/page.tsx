@@ -42,11 +42,14 @@ export default async function Home() {
             </p>
           </div>
           
-          <div className="flex space-x-8 text-sm tracking-widest font-medium">
-            <Link href="/" className="text-black dark:text-[#F4F1E9] border-b border-black dark:border-[#F4F1E9] pb-1 hover:text-[#A33D32] dark:hover:text-[#A33D32] hover:border-[#A33D32] dark:hover:border-[#A33D32] transition-colors duration-300 flex items-center">
+          <div className="flex space-x-8 text-base tracking-widest font-medium">
+            <Link href="https://github.com/Alan-Allen" className="text-black dark:text-[#F4F1E9] border-b border-black dark:border-[#F4F1E9] pb-1 hover:text-[#A33D32] dark:hover:text-[#A33D32] hover:border-[#A33D32] dark:hover:border-[#A33D32] transition-colors duration-300 flex items-center">
               藏經閣 <span className="ml-2 font-mono">↗</span>
             </Link>
-            <a href="#about" className="text-[#8C8C8C] hover:text-black dark:hover:text-[#F4F1E9] transition-colors duration-300 flex items-center">
+          </div>
+
+          <div className="flex justify-center space-x-8 text-2xl tracking-widest font-medium w-full mt-32" >
+            <a href="#about" className="animate-bounce-slow text-[#8C8C8C] hover:text-black dark:hover:text-[#F4F1E9] transition-colors duration-500 flex items-center">
               吾人 <span className="ml-2 font-mono">↓</span>
             </a>
           </div>
