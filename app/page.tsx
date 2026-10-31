@@ -6,7 +6,6 @@ import SideNav from '@/components/SideNav'; // /* 新增：引入導覽列 */
 export const instant = false;
 
 export default async function Home() {
-  
   const posts = await prisma.post.findMany({
     where: { published: true },
     orderBy: { createdAt: 'desc' },
