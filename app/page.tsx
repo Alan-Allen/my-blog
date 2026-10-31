@@ -4,8 +4,6 @@ import FadeIn from '@/components/FadeIn';
 import SideNav from '@/components/SideNav'; // /* 新增：引入導覽列 */
 import { unstable_noStore as noStore } from 'next/cache';
 
-export const dynamic = 'force-dynamic'; 
-
 export default async function Home() {
   
   const posts = await prisma.post.findMany({
